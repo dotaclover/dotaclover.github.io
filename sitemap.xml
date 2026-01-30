@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- 主页 -->
+  <url>
+    <loc>https://dotaclover.github.io/</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 关于我 -->
+  <url>
+    <loc>https://dotaclover.github.io/#about</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 服务项目 -->
+  <url>
+    <loc>https://dotaclover.github.io/#services</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 技能简历 -->
+  <url>
+    <loc>https://dotaclover.github.io/#resume</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 成长历程 -->
+  <url>
+    <loc>https://dotaclover.github.io/#journey</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 合作优势 -->
+  <url>
+    <loc>https://dotaclover.github.io/#advantages</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- 联系方式 -->
+  <url>
+    <loc>https://dotaclover.github.io/#contact</loc>
+    <lastmod>2025-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

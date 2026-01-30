@@ -1,0 +1,31 @@
+# robots.txt for 小梁Clover Personal Website (GitHub Pages)
+# 允许所有搜索引擎抓取
+
+User-agent: *
+Allow: /
+
+# 禁止抓取的目录（如果有）
+Disallow: /unpackage/
+Disallow: /.git/
+
+# Sitemap 位置
+Sitemap: https://dotaclover.github.io/sitemap.xml
+
+# 常见搜索引擎爬虫
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+# 爬取频率建议（可选）
+Crawl-delay: 1
