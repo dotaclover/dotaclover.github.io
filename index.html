@@ -3,30 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>梁小梁 | 16 年 PHP 全栈开发工程师</title>
-  <meta name="description" content="梁小梁的个人求职作品集与展示网站。拥有 16 年 PHP 后端与全栈开发经验，熟练结合 AI 编程工具提效交付，人工控制质量边界。" />
+  <title>梁小梁 | 16年PHP全栈开发工程师</title>
+  <meta name="description" content="梁小梁的个人求职作品集与展示网站。拥有16年PHP后端与全栈开发经验，熟悉Laravel、WordPress/WooCommerce、业务后台、旧系统治理和AI协作开发。" />
   <link rel="icon" type="image/png" href="./favicon.png" />
-  <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
 </head>
 <body>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="glow-blobs-container">
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="glow-blob glow-blob-3"></div>
+  </div>
 
   <!-- Header -->
   <header class="header" id="header">
     <div class="container nav-container">
       <a class="logo" href="#hero">
         <span>梁小梁</span>
-        <span class="logo-badge">PHP 全栈</span>
+        <span class="logo-badge">PHP全栈</span>
       </a>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
           <li><a href="#hero" class="active">关于我</a></li>
           <li><a href="#advantages">核心优势</a></li>
-          <li><a href="#experience">工作经历</a></li>
           <li><a href="#projects">最近项目</a></li>
-          <li><a href="#contact">联系我</a></li>
+          <li><a href="#experience">工作经历</a></li>
+          <li><a href="#contact">联系方式</a></li>
         </ul>
       </nav>
     </div>
+    <!-- Mobile nav overlay inside header to resolve stacking context -->
+    <div class="nav-overlay" id="navOverlay"></div>
   </header>
 
   <!-- Hero Section (关于我) -->
@@ -34,9 +51,11 @@
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="hero-eyebrow">
-          <span>16 年 PHP 经验</span>
+          <span>16年PHP经验</span>
           <span>•</span>
-          <span>AI Co-Coding</span>
+          <span>Vibe Coding</span>
+          <span>•</span>
+          <span>旧项目治理</span>
         </div>
         
         <!-- Active Status Pill -->
@@ -48,11 +67,11 @@
         </div>
 
         <h1 class="hero-title">
-          把业务代码写得扎实，<br />
-          用 <span class="text-gradient">AI 工具</span> 跑出交付加速度
+          16年 PHP 全栈开发，<br />
+          把<span class="text-gradient">业务系统</span>做稳，让 AI 落地
         </h1>
         <p class="hero-subtitle">
-          专注于 PHP 后端与全栈开发，熟练结合 AI 编程工具提效交付。16 年互联网项目经验，擅长旧项目重构与二次开发，坚持“AI 负责提效，人负责安全与质量兜底”。
+          作为实战经验丰富的后端老兵，长期深耕企业后台架构、复杂接口集成与历史遗留系统重构。如今全面拥抱 Vibe Coding 开发模式，熟练借助 Claude、Cursor 等工具极速构建 Laravel 管理中枢、Go 原生 Agent 智能体与 RAG 知识库。坚持“AI 提效，人工质控”，确保交付的系统安全、健壮、可维护。
         </p>
         
         <div class="hero-tags">
@@ -60,24 +79,32 @@
           <span class="hero-tag">Laravel</span>
           <span class="hero-tag">ThinkPHP</span>
           <span class="hero-tag">CodeIgniter</span>
+          <span class="hero-tag">Go</span>
+          <span class="hero-tag">Python</span>
           <span class="hero-tag">WordPress</span>
           <span class="hero-tag">WooCommerce</span>
           <span class="hero-tag">FastAdmin</span>
           <span class="hero-tag">CRMEB</span>
-          <span class="hero-tag">Vue 3</span>
+          <span class="hero-tag">Vue3</span>
           <span class="hero-tag">JS/TS</span>
           <span class="hero-tag">UniApp</span>
           <span class="hero-tag">MySQL</span>
           <span class="hero-tag">Redis</span>
           <span class="hero-tag">Swoole</span>
           <span class="hero-tag">Hyperf</span>
+          <span class="hero-tag">REST API</span>
+          <span class="hero-tag">Nginx</span>
           <span class="hero-tag">Docker</span>
-          <span class="hero-tag">CI/CD</span>
+          <span class="hero-tag">Agent</span>
+          <span class="hero-tag">RAG</span>
+          <span class="hero-tag">Embedding</span>
+          <span class="hero-tag">OpenAI API</span>
+          <span class="hero-tag">Vibe Coding</span>
         </div>
 
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">查看项目</a>
-          <a href="#contact" class="btn btn-secondary">联系我</a>
+          <a href="#contact" class="btn btn-secondary">联系方式</a>
         </div>
       </div>
       
@@ -92,34 +119,138 @@
   <!-- Core Advantages (核心优势) -->
   <section class="section-padding" id="advantages" style="background-color: var(--bg-surface);">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <p class="section-eyebrow">Advantages</p>
         <h2 class="section-title">核心优势</h2>
         <div class="section-divider"></div>
       </div>
 
       <div class="card-grid">
-        <div class="card">
+        <div class="card reveal reveal-delay-1">
           <div class="advantage-header">
             <span class="advantage-icon">🚀</span>
-            <h3 class="advantage-title">16年全栈与多语言</h3>
+            <h3 class="advantage-title">16年全栈业务交付</h3>
           </div>
-          <p class="advantage-desc">拥有16年开发经验，精通PHP/Laravel/ThinkPHP，并有Go、Python、Node及TypeScript等全栈开发积累。能承接高并发接口集成、重构与问题治理，具备Vue3与UniApp前端能力，保障系统稳健交付。</p>
+          <div class="advantage-desc">
+            <p><strong>精通生态：</strong>熟练掌握 Laravel、ThinkPHP 及 WordPress 等主流生态。</p>
+            <p><strong>独立架构：</strong>从 0 到 1 架构业务后台、电商交易、会员服务及各类三方接口。</p>
+            <p><strong>技术攻坚：</strong>能快速接手并治理遗留“屎山”代码，实现平滑重构与稳定性保障。</p>
+          </div>
         </div>
-        <div class="card">
+        <div class="card reveal reveal-delay-2">
           <div class="advantage-header">
             <span class="advantage-icon">🤖</span>
-            <h3 class="advantage-title">AI编程与工程化</h3>
+            <h3 class="advantage-title">AI辅助开发与质控</h3>
           </div>
-          <p class="advantage-desc">熟练运用Codex、Claude Code和Cursor等AI工具辅助日常提效开发，擅长快速阅读复杂旧代码、排查定位Bug并补齐测试。习惯“实现+Review”双AI会话，将AI输出纳入人工审查，实现安全的高交付速度。</p>
+          <div class="advantage-desc">
+            <p><strong>Vibe Coding：</strong>深度践行 AI 理念，熟练运用 Claude、Cursor 极速落地需求。</p>
+            <p><strong>双轨工作流：</strong>建立“需求拆解生成 + 代码 Review 兜底”的现代开发模式。</p>
+            <p><strong>人工把关：</strong>由开发者把控架构设计、安全边界及线上可用性，兼顾高产出与零事故。</p>
+          </div>
         </div>
-        <div class="card">
+        <div class="card reveal reveal-delay-3">
           <div class="advantage-header">
             <span class="advantage-icon">⚡</span>
-            <h3 class="advantage-title">快速自学与弹性合作</h3>
+            <h3 class="advantage-title">AI应用工程化落地</h3>
           </div>
-          <p class="advantage-desc">具备极强自驱力与快速学习适应能力，能极速接手陌生项目与疑难代码。技术视野开阔，能快速攻克异构系统难题。目前处于离职状态，支持全职或兼职等弹性合作，随时可快速到岗，高效适配企业技术规范。</p>
+          <div class="advantage-desc">
+            <p><strong>深度融合：</strong>不局限于 API 搬运，更擅长将 AI 能力深度融入实际业务场景。</p>
+            <p><strong>底层搭建：</strong>基于 Go/Python 独立搭建企业级 RAG 知识库、Embedding 与 Agent。</p>
+            <p><strong>业务闭环：</strong>将大模型、数字人等 AI 能力工程化，落地为稳定、可回溯的业务流程。</p>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Section (最近项目) -->
+  <section class="section-padding" id="projects" style="background-color: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Projects</p>
+        <h2 class="section-title">最近项目</h2>
+        <div class="section-divider"></div>
+        <p class="section-lead">这里展示了我近期独立落地的核心项目。从基于 Laravel 的全栈 AI 管理后台，到 Go 原生的底层 Agent 智能体与 RAG 知识库，再到 Python 向量化支撑服务，完整展现了我将 AI 前沿技术与实际业务系统深度融合的工程架构能力。</p>
+      </div>
+
+      <!-- Project filter tabs -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">全部项目</button>
+        <button class="filter-btn" data-filter="admin">AI管理后台</button>
+        <button class="filter-btn" data-filter="agent">智能体</button>
+        <button class="filter-btn" data-filter="kb">知识库</button>
+      </div>
+
+      <div class="card-grid" id="projectGrid">
+        
+        <div class="card project-card reveal reveal-delay-1" data-category="admin">
+          <div class="project-tag-bar">
+            <span class="project-tag">Laravel 12</span>
+            <span class="project-tag">Vue 3</span>
+            <span class="project-tag">Element Plus</span>
+            <span class="project-tag">Queue</span>
+            <span class="project-tag">AI Provider</span>
+          </div>
+          <h3 class="project-title">AI 业务驱动与管理中枢 (laraver-server)</h3>
+          <p class="project-desc">
+            作为整套 AI 架构的业务中枢，基于 Laravel 12 与 Vue 3 全栈开发。深度集成了大语言模型、图片视频生成与 TTS 等能力，不仅提供无缝对接的 Live Chat 智能客服与 RAG 管理，还实现了健壮的异步任务队列、多供应商无缝切换及完整的系统审计日志体系。
+          </p>
+          <div class="project-links">
+            <a href="https://laravel.acfunc.online/admin" target="_blank" class="project-link">演示网站 →</a>
+          </div>
+        </div>
+
+        <div class="card project-card reveal reveal-delay-2" data-category="agent">
+          <div class="project-tag-bar">
+            <span class="project-tag">Go</span>
+            <span class="project-tag">Tool Calling</span>
+            <span class="project-tag">SQLite</span>
+            <span class="project-tag">SSE</span>
+            <span class="project-tag">MCP</span>
+          </div>
+          <h3 class="project-title">轻量级原生智能体引擎 (ageng-server)</h3>
+          <p class="project-desc">
+            一款轻量、高性能的 Go 原生 Agent 智能助手引擎。内置简洁的前端交互与 SQLite 会话持久化，核心实现了基于 Tool Calling 与 LLM Planner 的显式智能体编排，通过标准化接入外部 MCP 协议工具，能以极低的资源消耗支撑起复杂的流式对话与任务执行。
+          </p>
+          <div class="project-links">
+            <a href="https://aiagent.acfunc.online" target="_blank" class="project-link">演示网站 →</a>
+          </div>
+        </div>
+
+        <div class="card project-card reveal reveal-delay-1" data-category="kb">
+          <div class="project-tag-bar">
+            <span class="project-tag">Go</span>
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">Hybrid Search</span>
+            <span class="project-tag">Vector Search</span>
+            <span class="project-tag">Synonym</span>
+          </div>
+          <h3 class="project-title">高性能混合检索 RAG 服务 (rag-server)</h3>
+          <p class="project-desc">
+            企业级多 Domain 中文 RAG（检索增强生成）服务。完全使用 Go 独立构建，提供高效的多维度混合检索（BM25 词频 + 向量语义）。内置智能文档切片、同义词扩展与动态权重调优引擎，确保在复杂的垂直领域下依然能输出极其精准的知识上下文。
+          </p>
+          <div class="project-links">
+            <a href="https://rag.acfunc.online" target="_blank" class="project-link">演示网站 →</a>
+          </div>
+        </div>
+
+        <div class="card project-card reveal reveal-delay-2" data-category="kb">
+          <div class="project-tag-bar">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">FastAPI</span>
+            <span class="project-tag">BGE-small-zh</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">OpenAI API</span>
+          </div>
+          <h3 class="project-title">本地 Embedding 向量化服务 (embeding-server)</h3>
+          <p class="project-desc">
+            底层的通用向量化支撑服务。采用 Python 与 FastAPI 极速构建，直接挂载 BGE-small-zh 模型提供毫秒级文本向量化能力。对外封装为完全兼容 OpenAI 标准的 API 接口，可容器化一键部署，为上层 RAG 服务提供最底层的 512 维高质量中文语义支持。
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/dotaclover/embeding-server" target="_blank" class="project-link">GitHub →</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -127,14 +258,14 @@
   <!-- Work Experience Timeline (工作经历) -->
   <section class="section-padding" id="experience">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <p class="section-eyebrow">Timeline</p>
         <h2 class="section-title">工作经历</h2>
         <div class="section-divider"></div>
       </div>
 
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-header">
@@ -147,17 +278,17 @@
               <span>全职开发与维护</span>
             </div>
             <ul class="timeline-achievements">
-              <li>负责海外站全职开发与维护，主要功能包括 WordPress / WooCommerce 电商、Google / Meta 广告留资、自定义插件开发、业务后台和 CRM 平台对接。</li>
-              <li>参与运营管理后台开发，接入大语言模型、即梦图片/视频、HeyGen 数字人等 AI 能力。</li>
+              <li>负责海外站全职开发与维护，主要功能包括WordPress/WooCommerce电商、Google/Meta广告留资、自定义插件开发、业务后台和CRM平台对接。</li>
+              <li>参与运营管理后台开发，接入大语言模型、即梦图片/视频、HeyGen数字人等AI能力。</li>
             </ul>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3 class="timeline-title">PHP 开发</h3>
+              <h3 class="timeline-title">PHP开发</h3>
               <span class="timeline-date">2024.10 - 2025.12</span>
             </div>
             <div class="timeline-meta">
@@ -166,18 +297,18 @@
               <span>商城定制开发</span>
             </div>
             <ul class="timeline-achievements">
-              <li>基于 CRMEB 完成商城后端定制开发，集成 QQ、微信、微信公众号登录和京东联盟接口。</li>
-              <li>扩展 WebSocket 私聊 / 群聊能力；启用 Swoole 协程并结合 Nginx 优化并发处理和静态资源访问。</li>
+              <li>基于CRMEB完成商城后端定制开发，集成QQ、微信、微信公众号登录和京东联盟接口。</li>
+              <li>扩展WebSocket私聊/群聊能力；启用Swoole协程并结合Nginx优化并发处理和静态资源访问。</li>
               <li>优化授权校验、本地开发环境和基础代码，提高交付效率与系统稳定性。</li>
             </ul>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3 class="timeline-title">PHP 开发</h3>
+              <h3 class="timeline-title">PHP开发</h3>
               <span class="timeline-date">2021.01 - 2024.03</span>
             </div>
             <div class="timeline-meta">
@@ -186,18 +317,18 @@
               <span>唯乐会员平台全栈开发</span>
             </div>
             <ul class="timeline-achievements">
-              <li>负责 CI4 + Vue3 唯乐会员平台全栈开发，基于 MVC + Service + Module 架构进行系统设计与持续重构，提升整体可维护性与扩展性。</li>
+              <li>负责CI4+Vue3唯乐会员平台全栈开发，基于MVC+Service+Module架构进行系统设计与持续重构，提升整体可维护性与扩展性。</li>
               <li>覆盖产品购买、会员订阅、社区互动等交易与用户体系模块。</li>
-              <li>集成视频处理、图片处理、报表分析及 AI 内容审核等内部能力服务，参与接口规范设计与系统性能优化，完善日志、缓存与异步任务机制。</li>
+              <li>集成视频处理、图片处理、报表分析及AI内容审核等内部能力服务，参与接口规范设计与系统性能优化，完善日志、缓存与异步任务机制。</li>
             </ul>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3 class="timeline-title">PHP 开发</h3>
+              <h3 class="timeline-title">PHP开发</h3>
               <span class="timeline-date">2015.07 - 2020.03</span>
             </div>
             <div class="timeline-meta">
@@ -206,17 +337,36 @@
               <span>核心游戏后端重构</span>
             </div>
             <ul class="timeline-achievements">
-              <li>负责公司核心游戏业务后端架构演进与遗留系统重构，基于 PHP7 自主设计 MVC + Service 分层架构，统一接口规范、公共模块、缓存及数据库访问层。</li>
-              <li>作为技术负责人统筹 6-8 人技术团队，负责需求拆分、技术方案评审、代码 Review、研发规范建设与项目推进，降低多人协作下的生产问题风险。</li>
+              <li>负责公司核心游戏业务后端架构演进与遗留系统重构，基于PHP7自主设计MVC+Service分层架构，统一接口规范、公共模块、缓存及数据库访问层。</li>
+              <li>作为技术负责人统筹6-8人技术团队，负责需求拆分、技术方案评审、代码Review、研发规范建设与项目推进，降低多人协作下的生产问题风险。</li>
             </ul>
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-header">
-              <h3 class="timeline-title">PHP 开发</h3>
+              <h3 class="timeline-title">PHP开发</h3>
+              <span class="timeline-date">2014.11 - 2015.06</span>
+            </div>
+            <div class="timeline-meta">
+              <span>北京畅游瑞科公司广州分公司</span>
+              <span>•</span>
+              <span>运营活动后端开发</span>
+            </div>
+            <ul class="timeline-achievements">
+              <li>负责RC语音运营活动后端功能开发、官网维护及专题页面接口开发，参与QQ、微信公众号、Facebook等第三方接口接入。</li>
+              <li>为运营活动、用户绑定、分享及活动页面提供稳定后端支持，积累高并发抽奖、奖品库存一致性和活动接口经验。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3 class="timeline-title">PHP开发</h3>
               <span class="timeline-date">2010.04 - 2014.11</span>
             </div>
             <div class="timeline-meta">
@@ -226,99 +376,54 @@
             </div>
             <ul class="timeline-achievements">
               <li>负责云服务销售平台前后端开发，业务涵盖域名、虚拟主机、云服务器等。</li>
-              <li>主导 PHP4 到 ThinkPHP 的系统重构，接入 VeriSign 域名注册商，开发服务器租用和短信平台，完成虚拟主机系统替换与性能优化，提升业务自动化能力。</li>
+              <li>主导PHP4到ThinkPHP的系统重构，接入VeriSign域名注册商，开发服务器租用和短信平台，完成虚拟主机系统替换与性能优化，提升业务自动化能力。</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Project Section (最近项目) -->
-  <section class="section-padding" id="projects" style="background-color: var(--bg-surface);">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Projects</p>
-        <h2 class="section-title">最近项目</h2>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="card-grid" id="projectGrid">
-        
-        <!-- AI内容生产后台 (Laravel) -->
-        <div class="card project-card">
-          <div class="project-tag-bar">
-            <span class="project-tag">Laravel 12</span>
-            <span class="project-tag">Vue 3</span>
-            <span class="project-tag">Provider API</span>
-            <span class="project-tag">Task Queue</span>
-            <span class="project-tag">Light RAG</span>
-          </div>
-          <h3 class="project-title">AI内容生产后台</h3>
-          <p class="project-desc">
-            独立负责AI内容生产平台整体架构设计与核心研发，将大模型能力封装为可运营、可配置的业务系统。基于Laravel + Vue3 构建统一 AI Provider 管理、任务编排、队列执行、状态追踪、审计日志及 Tool Calling 等核心能力，实现多模型统一接入与业务解耦。平台集成LLM文本生成、图片生成、视频生成、TTS语音、数字人等多种AI服务，形成短视频内容自动化生产流程；针对中小规模知识库场景，自主实现轻量级 RAG 检索流程（文本切分、相似度检索、上下文拼接），在保证开发效率的同时满足实际业务需求，并成功应用于生产环境。
-          </p>
-          <div class="project-links">
-            <a href="https://laravel.cloverphp.top" target="_blank" class="project-link" id="p2Demo">示例网站 →</a>
-          </div>
-        </div>
-
-        <!-- AI智能体服务 (Go) -->
-        <div class="card project-card">
-          <div class="project-tag-bar">
-            <span class="project-tag">Go Lang</span>
-            <span class="project-tag">Agent Runtime</span>
-            <span class="project-tag">MCP Client</span>
-            <span class="project-tag">Tool Registry</span>
-          </div>
-          <h3 class="project-title">AI智能体服务</h3>
-          <p class="project-desc">
-            基于Go自主设计并实现轻量级Agent Runtime，完成Provider、Memory、Tool Calling、Plan、Retry、Streaming 等核心能力，实现OpenAI Compatible Provider抽象、多模型接入、流式响应及上下文管理。通过对LangChain、LangGraph、Dify 等框架进行方案调研与能力对比，验证 Agent Runtime的核心设计思路，形成可裁剪、可扩展的 AI 应用架构，并将相关设计经验复用于实际业务系统开发。
-          </p>
-          <div class="project-links">
-            <a href="https://agent.cloverphp.top" target="_blank" class="project-link" id="p3Demo">示例网站 →</a>
-            <a href="https://github.com/dotaclover/go-agent-demo" target="_blank" class="project-link" id="p3Repo">开源仓库 →</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section (联系我) -->
+  </section><!-- Contact Section (联系我) -->
   <section class="section-padding" id="contact">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <p class="section-eyebrow">Contact</p>
-        <h2 class="section-title">联系我</h2>
+        <h2 class="section-title">联系方式</h2>
         <div class="section-divider"></div>
       </div>
 
-      <div class="contact-container-centered">
-        <p class="contact-subtitle">如果您对我的项目经验或技术栈感兴趣，欢迎通过以下渠道与我沟通。期待与您合作，共同保障业务的平稳交付。</p>
+      <div class="contact-container-centered reveal">
+        <p class="contact-subtitle">如果您对我独立交付复杂业务架构、推进 AI 智能化转型的工程实践感兴趣，或者有历史遗留系统亟待重构，欢迎通过以下渠道与我联系。随时可到岗，点击卡片即可复制联系方式。</p>
         <div class="contact-cards">
           
-          <div class="contact-method-card">
+          <div class="contact-method-card reveal reveal-delay-1" data-copy="cloverphp@qq.com" title="点击复制邮箱">
             <div class="contact-method-icon">✉️</div>
             <div>
               <p class="contact-method-label">电子邮箱</p>
-              <p class="contact-method-value"><a href="mailto:cloverphp@qq.com">cloverphp@qq.com</a></p>
+              <p class="contact-method-value"><a href="mailto:cloverphp@qq.com" class="contact-link">cloverphp@qq.com</a></p>
             </div>
           </div>
 
-          <div class="contact-method-card">
+          <div class="contact-method-card reveal reveal-delay-2" data-copy="13570476481" title="点击复制电话/微信">
             <div class="contact-method-icon">📱</div>
             <div>
-              <p class="contact-method-label">电话 / 微信</p>
+              <p class="contact-method-label">电话/微信</p>
               <p class="contact-method-value">13570476481</p>
             </div>
           </div>
 
-          <div class="contact-method-card">
+          <div class="contact-method-card reveal reveal-delay-3" data-copy="广东广州" title="点击复制期望城市">
             <div class="contact-method-icon">📍</div>
             <div>
               <p class="contact-method-label">期望城市</p>
               <p class="contact-method-value">广东广州</p>
+            </div>
+          </div>
+
+          <div class="contact-method-card reveal reveal-delay-4" data-copy="https://github.com/dotaclover" title="点击复制GitHub链接">
+            <div class="contact-method-icon"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="display: block;"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div>
+            <div>
+              <p class="contact-method-label">GitHub</p>
+              <p class="contact-method-value"><a href="https://github.com/dotaclover" target="_blank" class="contact-link">dotaclover</a></p>
             </div>
           </div>
 
@@ -338,7 +443,7 @@
         </a>
       </div>
       <p class="footer-copyright">
-        © 2026 爱思函数集合 | 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2025505734号-1</a>
+        © 2026 梁小梁个人作品集 | 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2025505734号-1</a>
       </p>
     </div>
   </footer>
@@ -391,6 +496,153 @@
         }
       });
     });
+
+    // Mobile Drawer Navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinksContainer = document.getElementById('navLinks');
+    const navOverlay = document.getElementById('navOverlay');
+    const drawerLinks = document.querySelectorAll('.nav-links a');
+
+    function toggleMenu() {
+      menuToggle.classList.toggle('open');
+      navLinksContainer.classList.toggle('open');
+      navOverlay.classList.toggle('open');
+      
+      const isOpen = navLinksContainer.classList.contains('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    navOverlay.addEventListener('click', toggleMenu);
+
+    drawerLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinksContainer.classList.contains('open')) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // Project Filtering with smooth fade transition
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons and add to clicked
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          
+          if (filterValue === 'all' || category === filterValue) {
+            // First show in layout (remove hidden)
+            card.classList.remove('hidden');
+            // Allow layout to recalculate, then fade in
+            setTimeout(() => {
+              card.classList.remove('fade-out');
+            }, 10);
+          } else {
+            // Fade out
+            card.classList.add('fade-out');
+            // After transition finishes, hide in layout
+            setTimeout(() => {
+              if (card.classList.contains('fade-out')) {
+                card.classList.add('hidden');
+              }
+            }, 350); // matches CSS transition duration
+          }
+        });
+      });
+    });
+
+    // Copy to Clipboard with floating tooltip
+    const contactCards = document.querySelectorAll('.contact-method-card');
+    
+    contactCards.forEach(card => {
+      const copyText = card.getAttribute('data-copy');
+      if (!copyText) return;
+
+      // Prevent link clicks from triggering copy
+      const innerLinks = card.querySelectorAll('a');
+      innerLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+      });
+
+      function showTooltip() {
+        // Check if tooltip already exists
+        let tooltip = card.querySelector('.copy-tooltip');
+        if (!tooltip) {
+          tooltip = document.createElement('div');
+          tooltip.className = 'copy-tooltip';
+          tooltip.textContent = '已复制!';
+          card.appendChild(tooltip);
+        }
+
+        // Show tooltip
+        setTimeout(() => tooltip.classList.add('show'), 10);
+
+        // Hide after 2 seconds
+        setTimeout(() => {
+          tooltip.classList.remove('show');
+        }, 2000);
+      }
+
+      card.addEventListener('click', () => {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(copyText).then(showTooltip).catch(err => {
+            console.error('navigator.clipboard error: ', err);
+            fallbackCopy();
+          });
+        } else {
+          fallbackCopy();
+        }
+
+        function fallbackCopy() {
+          const textarea = document.createElement('textarea');
+          textarea.value = copyText;
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            document.execCommand('copy');
+            showTooltip();
+          } catch (err) {
+            console.error('Fallback copy failed: ', err);
+          }
+          document.body.removeChild(textarea);
+        }
+      });
+    });
+
+    // Intersection Observer for Scroll Reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target); // Animates only once
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px -40px 0px' // triggers slightly before entering viewport
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+      // Fallback: immediately show all elements if observer is not supported
+      revealElements.forEach(el => el.classList.add('revealed'));
+    }
   </script>
 </body>
 </html>
