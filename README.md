@@ -1,12 +1,12 @@
 # 梁小梁的个人主页
 
-16年 PHP 后端开发经验，专注业务系统、遗留系统重构与 AI 应用实践。
+16 年全栈开发经验（PHP / Vue3 / Go / Python），2024 年起全面转向 AI 驱动开发，完成「IDE → 命令行 → Agent」的工具演进，模型以 GPT 系列为主力，混用 Claude 与国产 DeepSeek、GLM。
 
-主页包含个人介绍、核心优势、项目展示、工作经历、教育背景和联系方式。
+主页包含个人介绍、AI 实践路径、核心优势、项目展示、工作经历、教育背景和联系方式。
 
 ## 项目展示
 
-- `game-backend-lab`：休闲游戏平台。
+- `clover-games`：休闲游戏平台。
 - `clover-workflow`：工作流与内容自动化。
 - `cloverapi`：基于 New API 扩展的 AI 模型网关。
 - `clovergeo`：GEO 内容运营平台。

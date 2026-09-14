@@ -1634,3 +1634,94 @@ a {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ===== AI Workflow Section (AI 实践) ===== */
+.ai-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .ai-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+  }
+}
+
+.ai-step {
+  position: relative;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--teal-accent);
+  border-radius: 12px;
+  padding: 1.6rem;
+  transition: all 0.3s;
+}
+
+.ai-step:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), 0 0 10px rgba(20, 184, 166, 0.1);
+}
+
+.ai-step-year {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--teal-accent);
+}
+
+.ai-step-tool {
+  margin-top: 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.ai-step-stage {
+  display: inline-block;
+  margin: 0.55rem 0 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--teal-accent);
+  background-color: rgba(20, 184, 166, 0.1);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.ai-step-desc {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.ai-model-note {
+  max-width: 1000px;
+  margin: 1.75rem auto 0;
+  padding: 1.5rem 1.6rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--teal-accent);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.ai-model-note p {
+  margin-bottom: 0.6rem;
+}
+
+.ai-model-note p:last-child {
+  margin-bottom: 0;
+}
+
+.ai-model-note strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
