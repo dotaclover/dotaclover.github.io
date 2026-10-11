@@ -1,24 +1,15 @@
-# 梁小梁的个人主页
+# dotaclover.github.io
 
-16 年全栈开发经验（PHP / Vue3 / Go / Python），2024 年起全面转向 AI 驱动开发，完成「IDE → 命令行 → Agent」的工具演进，模型以 GPT 系列为主力，混用 Claude 与国产 DeepSeek、GLM。
+梁小梁（Clover）的 GitHub Pages 个人名片。
 
-主页包含个人介绍、AI 实践路径、核心优势、项目展示、工作经历、教育背景和联系方式。
-
-## 项目展示
-
-- `clover-games`：休闲游戏平台。
-- `clover-workflow`：工作流与内容自动化。
-- `cloverapi`：基于 New API 扩展的 AI 模型网关。
-- `clovergeo`：GEO 内容运营平台。
-
-项目卡片仅介绍业务概况与主要技术栈。
-
-## 资料维护方向（2026-09-07）
-
-Clover2030 当前分工为 Workflow 主攻、Studio 独立生成能力、Template 稳定底座、Game 第二个领域代表作。9 月集中整理 AI 工作流与交易状态两个案例，10/1 检查演示、验证说明和小范围反馈。
-
-上面的“项目展示”仍描述当前主页已有卡片，本次只同步文档；Studio / Template 不因这段说明自动成为已发布卡片。页面素材与真实项目证据对齐后，再单独验证展示效果。
+页面只保留简短个人介绍，并引导访问持续更新的完整个人主页：<https://www.cloverphp.top/>。
 
 ## 本地预览
 
-纯静态 HTML / CSS / JavaScript，无需构建。可在此目录运行 `python -m http.server 8080 --bind 127.0.0.1`，访问 `http://127.0.0.1:8080`。
+这是纯静态 HTML / CSS 页面，无需构建。在项目目录运行：
+
+```powershell
+python -m http.server 8080 --bind 127.0.0.1
+```
+
+然后访问 <http://127.0.0.1:8080/>。
