@@ -138,6 +138,29 @@ h1 {
   background: rgba(15, 94, 82, 0.055);
 }
 
+.about {
+  max-width: 700px;
+  padding: 18px 20px;
+  margin-top: 24px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 14px 14px 0;
+  background: rgba(231, 163, 61, 0.07);
+}
+
+.about h2 {
+  margin: 0 0 7px;
+  color: var(--primary-dark);
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+}
+
+.about p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
 .actions {
   display: flex;
   margin-top: 36px;
