@@ -61,17 +61,6 @@ body::before {
   backdrop-filter: blur(18px);
 }
 
-.profile-card::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 170px;
-  height: 8px;
-  content: "";
-  border-radius: 0 34px 0 8px;
-  background: linear-gradient(90deg, var(--accent), var(--primary));
-}
-
 .profile-card__intro {
   min-width: 0;
 }
@@ -216,30 +205,35 @@ h1 {
 
 .portrait {
   position: relative;
-  z-index: 0;
   margin: 0;
   text-align: center;
 }
 
+.portrait__image {
+  position: relative;
+  width: min(100%, 310px);
+  margin: 0 auto;
+  isolation: isolate;
+}
+
 .portrait__halo {
   position: absolute;
-  inset: -22px -22px 58px;
+  inset: -18px;
   z-index: -1;
   border: 1px solid rgba(15, 94, 82, 0.15);
-  border-radius: 46% 54% 48% 52%;
+  border-radius: 50%;
   background: linear-gradient(145deg, rgba(231, 163, 61, 0.22), rgba(15, 94, 82, 0.14));
-  transform: rotate(-4deg);
 }
 
 .portrait img {
   display: block;
-  width: min(100%, 310px);
+  width: 100%;
   height: auto;
   margin: 0 auto;
   aspect-ratio: 1;
   object-fit: cover;
   border: 8px solid rgba(255, 255, 255, 0.82);
-  border-radius: 44% 56% 48% 52%;
+  border-radius: 50%;
   box-shadow: 0 20px 48px rgba(22, 49, 45, 0.19);
 }
 
@@ -323,13 +317,8 @@ footer a:hover { color: var(--primary); }
     border-radius: 24px;
   }
 
-  .profile-card::after {
-    width: 115px;
-    border-radius: 0 24px 0 8px;
-  }
-
   .portrait { grid-row: 1; }
-  .portrait img { width: min(68vw, 240px); }
+  .portrait__image { width: min(68vw, 240px); }
   .lead { line-height: 1.75; }
 }
 
