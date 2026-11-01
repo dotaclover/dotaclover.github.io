@@ -6,6 +6,7 @@
        node build.mjs --site <站点目录>
 */
 window.SITE = {
+  "layout": "page",
   "lang": "zh-CN",
   "contactBar": true,
   "site": {
