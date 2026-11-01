@@ -43,7 +43,7 @@ window.SITE = {
       "照片精修"
     ],
     "worksTitle": "最近拍的一些",
-    "worksNote": "影棚日常、人像和婚礼跟拍。以下是演示素材，不是客户案例。",
+    "worksNote": "影棚日常、人像和婚礼跟拍。以下是演示素材，人物与联系方式均已脱敏处理。",
     "works": [
       {
         "src": "./images/work-01.jpg",
